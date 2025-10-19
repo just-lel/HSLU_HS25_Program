@@ -1,14 +1,14 @@
-import ifcopenshell, ifcopenshell.geom, ifcopenshell.util.shape
+import Deff
 
-print(ifcopenshell.__version__)
+
 
 file_path = "C:\\Users\\opti\\OneDrive - Burkhalter Group\\!Studium\\3.Semester\\DT_Progr\\IFC's\\Eine Steckdose\\Steckdose.IFC"
 
-ifc_file = ifcopenshell.open(file_path)
+ifc_type = "IfcOutlet"
 
-for outlet in ifc_file.by_type("IfcOutlet"):
-    print(outlet.Name)
+dict_outlet = Deff.get_infos_from_Pset(file_path, ifc_type)
 
-print("hello")
+print(dict_outlet)
 
-print("hey")
+
+
